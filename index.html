@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <script defer src="./app/index.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./app/style.css">
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  
+
+
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container" >
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" id="closemenu" >&times;</a>
+      <div class="side-link-container">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+
+    </div>
+
+   
+
+  
+   
+    
+    <!-- END OF NAV BAR -->
+    <div class="grayed" id="grayed"></div>
+    <div class="main" id="main">
+      <div class="navigation">
+        <div class="mobile-nav">
+          <div class="mobile-nav-left">
+            <img id="openmenu" src="./images/icon-menu.svg" alt="menu">
+            <img src="./images/logo.svg" alt="logo" class="logo">
+            <div class="desktop-nav">
+              <ul>
+                <li>
+                  <a href="#">Collections</a>
+        
+                </li>
+                <li>
+                  <a href="#">Men</a>
+      
+                </li>
+                <li>
+                    <a href="#">Women</a>
+      
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mobile-nav-right">
+            <img id="cart"  src="./images/icon-cart.svg" alt="cart">
+            <img id="avatar-img" src="./images/image-avatar.png" alt="avatar">
+          </div>
+        </div>
+      </div>
+      <div  class="cart-nav" id="cart-nav">
+        <p id="cart-text">Cart</p>
+        <div class="cart-items">
+          <div class="cart-empty" id="cart-empty" >
+            <p>Your cart is empty</p>
+          </div>
+          <div class="cart-with-items" id="cart-with-items">
+            <div class="cart-item">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="product-img">
+              <div class="cart-item-descript">
+                <p class="cart-item-text">Autumn Limited Edition...</p>
+                <div id="cart-price-container">
+                   <span >$125.00 x <span class="qnt-number" id="qnt-number">3</span></span><span id="total-order-price">375.00</span>
+                </div>
+              </div>
+              <img id="order-delete" src="./images/icon-delete.svg" alt="order-delete">
+              
+            </div>
+            <button id="checkout">Checkout</button>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+  
+
+      <div class="seperation">
+        
+        <div class="product-images">
+
+          <div class="product-img" id="prod-image1">
+            <img src="./images/image-product-1.jpg" alt="">
+          </div>
+          <div id="prod-image2" class="product-img">
+            <img src="./images/image-product-2.jpg" alt="">
+          </div>
+          <div id="prod-image3" class="product-img">
+            <img src="./images/image-product-3.jpg" alt="">
+          </div>
+          <div id="prod-image4" class="product-img">
+            <img src="./images/image-product-4.jpg" alt="">
+          </div>
+          <div class="backward" id="backward" onclick="plusSlides(-1)"><img src="./images/icon-previous.svg" alt="previous"></div>
+          <div class="forward" id="forward" onclick="plusSlides(1)"><img src="./images/icon-next.svg" alt="next"></div>
+  
+        </div>
+        <div class="desktop-product">
+          <div class="showimg">
+            <div class="dskproduct">
+              <img src="./images/image-product-1.jpg" alt="" class="desk-prod" id="dsk-prod1">
+            </div>
+            <div class="dskproduct">
+              <img src="./images/image-product-2.jpg" alt="" class="desk-prod" id="dsk-prod2">
+            </div>
+            <div class="dskproduct">
+              <img src="./images/image-product-3.jpg" alt="" class="desk-prod" id="dsk-prod3">
+            </div>
+            <div class="dskproduct">
+              <img src="./images/image-product-4.jpg" alt="" class="desk-prod" id="dsk-prod4">
+            </div>
+            
+          </div>
+          <div class="thumbnail">
+            <div class="product1">
+              <img src="./images/image-product-1-thumbnail.jpg" alt="" id="thmb-prd1" >
+            </div>
+            <div class="product2">
+              <img src="./images/image-product-2-thumbnail.jpg" alt="" id="thmb-prd2" >
+            </div>
+            <div class="product3">
+              <img src="./images/image-product-3-thumbnail.jpg" alt="" id="thmb-prd3" >
+            </div>
+            <div class="product4">
+              <img src="./images/image-product-4-thumbnail.jpg" alt="" id="thmb-prd4" >
+            </div>
+          </div>
+          
+        </div>
+        <div class="content">
+          <div class="product-descr">
+            <h1 id="company-name"">
+              Sneaker Company
+            </h1>
+            <h2 id="product-name">
+              Fall Limited Edition Sneakers
+            </h2>
+            <p id="product-description">
+              These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>
+          <div class="price-container">
+            <div class="price">
+              <div class="crnt-dsct">
+                <h3 id="price">
+                $125.00
+                </h3>
+                <p id="discount"> 50%</p>
+              </div>
+              
+              <div id="orig-price">
+                <p>$250.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="seperate2">
+            <div class="quantity">
+              <div class="quantity-minus">
+                <img src="./images/icon-minus.svg" id="minusquantity" alt="minus">
+              </div>
+              <div class="quantity-number">
+                <p id="item-quantity">0</p>
+              </div>
+              <div class="quantity-plus">
+                <img src="./images/icon-plus.svg" id="addquantity" alt="plus">
+              </div>
+            </div>
+            <div class="atc-container">
+              <button class="atc-btn" id="atc-btn"> <img src="./images/icon-cart.svg" id="cart" alt=""> Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+   
+    <div class="attribution" style="padding: 10px;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Erin Capuchino</a>.
+    </div>
+    
+    
+ 
+  </div>
+  
+  
+</body>
+</html>
